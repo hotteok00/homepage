@@ -21,7 +21,7 @@ public class Owner {
     private String password;
     private String name;
 
-    @OneToMany(mappedBy = "owners", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "owner", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Post> posts = new ArrayList<>();
 
 }
