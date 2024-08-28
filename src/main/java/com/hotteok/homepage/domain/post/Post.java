@@ -24,10 +24,10 @@ public class Post {
     private String contents;
     private LocalDateTime createdAt;
 
-    @OneToMany(mappedBy = "categories", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "post", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Category> categories = new ArrayList<>();
 
-    @OneToMany(mappedBy = "tags", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "post", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Tag> tags = new ArrayList<>();
 
     @ManyToOne
