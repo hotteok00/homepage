@@ -15,8 +15,8 @@ public class Category {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
-    private String topCategory;
-    private String subCategory;
+    private String hierarchy;
+    private String categoryName;
 
     @ManyToOne
     @JoinColumn(name = "post_id", nullable = false)
